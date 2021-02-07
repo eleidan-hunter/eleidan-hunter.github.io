@@ -1,1 +1,1 @@
-# eleidan-hunter.github.io
+# js-slider.github.io
