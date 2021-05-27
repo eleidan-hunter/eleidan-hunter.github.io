@@ -2,145 +2,37 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=, initial-scale=1.0">
+	<!-- <meta name="viewport" content="width=, initial-scale=1.0"> -->
 	<title>Document</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 	<div class="wrapper">
-		<script>
-			document.write(
-				`
-				<div class='clock'>
-					<input type="checkbox" id="time" >
-					<label for="time">
-						
-						<div class='meridiem'>Ante Meridiem</div>
 
-						<div class='arrow arrowHours'><span></span></div>
-						<div class='arrow arrowMinutes'><span></span></div>
-						<div class='arrow arrowSeconds'><span></span></div>
-						<div class="timeMarkers timeMarker__1">
-							<div class="timeMarker timeMarkerTop"></div>
-							<div class="timeMarker timeMarkerBottom"></div>
-						</div>
-						<div class="timeMarkers timeMarker__2">
-							<div class="timeMarker timeMarkerTop"></div>
-							<div class="timeMarker timeMarkerBottom"></div>						
-						</div>
-						<div class="timeMarkers timeMarker__3">
-							<div class="timeMarker timeMarkerTop"></div>
-							<div class="timeMarker timeMarkerBottom"></div>						
-						</div>
-						<div class="timeMarkers timeMarker__4">
-							<div class="timeMarker timeMarkerTop"></div>
-							<div class="timeMarker timeMarkerBottom"></div>						
-						</div>
-						<div class="timeMarkers timeMarker__5">
-							<div class="timeMarker timeMarkerTop"></div>
-							<div class="timeMarker timeMarkerBottom"></div>						
-						</div>
-						<div class="timeMarkers timeMarker__6">
-							<div class="timeMarker timeMarkerTop"></div>
-							<div class="timeMarker timeMarkerBottom"></div>						
-						</div>
-					</label>
-					
+		<div class="diceOutput"></div>
+		<button class="diceRoll">Roll the Dice</button>
+
+		<div class="battleGround">
+			<div class="player player_1">player 1
+				<div class="health">
+					<div class="healthMax">
+						<!-- <div class="healthIndicator"></div> -->
+					</div>
 				</div>
-				`
-			)
-			const dataTime = new Date();
+			</div>
 
-			let h = dataTime.getHours();
-			let m = dataTime.getMinutes();
-			let s = dataTime.getSeconds();
+			<div class="player player_2">player 2
+				<div class="health">
+					<div class="healthMax">
+						<!-- <div class="healthIndicator"></div> -->
+					</div>
+				</div>
+			</div>
 
-			h = h > 12? h - 12: h;
-
-			// let h = +prompt('enter hours');
-			// let m = +prompt('enter minutes');
-			// let s = +prompt('enter seconds');
-			
-			// console.log('hours', h);
-			// if ()
-
-			function animArrow(name, from, to){
-				return`
-				<style>
-					@keyframes ${name}{
-						from{
-							transform: rotate(${from}deg);
-						}
-						to {
-							transform: rotate(${to}deg);
-						}
-					}
-
-				</style>
-				`;
-			}
-
-			let hours = document.write(animArrow('hourSeconds', 6 * s, 360 + 6 * s));
-			let minutes = document.write(animArrow('hourMinutes', 6 * m, 360 + 6 * m + .1));
-			let seconds = document.write(animArrow('hourArrow', 30 * h + m * .5, 360 + 30 * h + m * .5));
-			
-		</script>
-		<!-- <div class="inner">
-			
-		</div> -->
-
-		<script>
-
-			// let num1 = prompt('enter yuor first number');
-			// let num2 = prompt('enter yuor second number');
-			// let num3 = prompt('enter yuor third number');
-			// // const a = ['bob', 'mark', 'jack', 'kel'];
-			// let arr = [];
-			// for (let i = 0; i < 100; i++){
-			// 	arr.push(Math.floor(Math.random() * 100));
-			// }
-			// //way 1
-			// //a.forEach(() => {})
-			// //way 2
-			// //a.forEach(function(){})
-			// //way 3
-			// //function f1(){}
-			// //a.forEach(f1)
-
-			// arr.forEach((element, index, array) => {
-			// 	if (element % num1 === 0 && element % num2 === 0 && element % num3 === 0){
-			// 		console.log('element',element, 'index',index);
-			// 	}
-
-
-				
-				// if(index % 2 == 0){
-				// 	console.log(element)
-				// 	console.log(new Date);
-				// };
-
-				// // console.log(dataTime);
-			//});
-
-			// a.map
-			// a.reduce
-			// a.filter
-			// a.forEach
-
-			// a.some
-			// a.every
-			// a.find
-			
-
-			// a.slice
-			// a.pop
-			// a.push
-			// a.shift
-			// a.unshift
-
-
-		</script>
+		</div>
 	</div>
+	
 	<script src="main.js"></script>
 </body>
 </html>
