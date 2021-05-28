@@ -1,32 +1,105 @@
-*{
-	margin: 0;
-	padding: 0;
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 75vh;
+  margin: auto;
 }
 
-.wraper{
-	display: flex;
-	flex-direction: column;
-	width: 25vw;
-	margin: auto;
-}
-.diceOutput{
-	display: flex;
-	width: 30px;
-	height: 30px;
-	margin: 1rem;
-	background: url(img/dice1.svg);
+.wrapper .dice-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
 }
 
-.healthMax{
-	display: flex;
-	width: 100px;
-	height: 10px;
-	background: #eee;
-	box-shadow: 0 0 0 transparent, -1px 2px 7px inset #000;
+.wrapper .dice-block .dice_output {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  margin: 1rem auto;
 }
 
-.healthMax .healthIndicator{
-	display: flex;
-	width: 100%;
-	background: red;
+.wrapper .battle_ground {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
+.wrapper .battle_ground .player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25%;
+  height: 10rem;
+  margin: 1rem 0;
+  padding: .5rem;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+
+.wrapper .battle_ground .player .player_name {
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.wrapper .battle_ground .player .health {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper .battle_ground .player .health_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 15px;
+  height: 15px;
+  margin-right: .5rem;
+}
+
+.wrapper .battle_ground .player .health_max {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 10px;
+  margin: auto;
+  background: #c8c8c8;
+  -webkit-box-shadow: 0 0 0 transparent, -1px 2px 7px inset #000;
+          box-shadow: 0 0 0 transparent, -1px 2px 7px inset #000;
+}
+
+.wrapper .battle_ground .player .health_indicator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background: #c80000;
+  -webkit-box-shadow: 0 0 0 transparent, -1px 2px 7px inset #960000;
+          box-shadow: 0 0 0 transparent, -1px 2px 7px inset #960000;
+}
+/*# sourceMappingURL=style.css.map */

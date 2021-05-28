@@ -1,0 +1,66 @@
+$ind-main: #c8c8c8
+$ind-shad: #000
+$health-main: #c80000
+$health-shad: #960000
+
+.wrapper
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 75vh
+  margin: auto
+
+  .dice-block
+    display: flex
+    flex-direction: column
+    width: 50%
+
+    .dice_output
+      display: flex
+      width: 30px
+      height: 30px
+      margin: 1rem auto
+  
+  .battle_ground
+    display: flex
+    width: 100%
+    justify-content: space-around
+
+    .player
+      display: flex
+      flex-direction: column
+      width: 25%
+      height: 10rem
+      margin: 1rem 0
+      padding: .5rem
+      border: 2px solid #000
+      border-radius: 10px
+
+      .player_name
+        text-align: center
+        padding: 0.5rem
+        margin: 0
+
+      .health
+        display: flex
+        box-sizing: border-box
+
+        &_icon
+          display: flex
+          width: 15px
+          height: 15px
+          margin-right: .5rem
+        &_max
+          display: flex
+          width: 100%
+          height: 10px
+          margin: auto
+          background: $ind-main
+          box-shadow: 0 0 0 transparent, -1px 2px 7px inset $ind-shad
+        
+        &_indicator
+          display: flex
+          width: 100%
+          background: $health-main
+          box-shadow: 0 0 0 transparent, -1px 2px 7px inset $health-shad
+

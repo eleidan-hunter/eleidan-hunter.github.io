@@ -1,0 +1,62 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75vh;
+  margin: auto;
+}
+.wrapper .dice-block {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.wrapper .dice-block .dice_output {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  margin: 1rem auto;
+}
+.wrapper .battle_ground {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.wrapper .battle_ground .player {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 10rem;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+.wrapper .battle_ground .player .player_name {
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0;
+}
+.wrapper .battle_ground .player .health {
+  display: flex;
+  box-sizing: border-box;
+}
+.wrapper .battle_ground .player .health_icon {
+  display: flex;
+  width: 15px;
+  height: 15px;
+  margin-right: 0.5rem;
+}
+.wrapper .battle_ground .player .health_max {
+  display: flex;
+  width: 100%;
+  height: 10px;
+  margin: auto;
+  background: #c8c8c8;
+  box-shadow: 0 0 0 transparent, -1px 2px 7px inset #000;
+}
+.wrapper .battle_ground .player .health_indicator {
+  display: flex;
+  width: 100%;
+  background: #c80000;
+  box-shadow: 0 0 0 transparent, -1px 2px 7px inset #960000;
+}
