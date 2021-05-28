@@ -1,3 +1,8 @@
+* {
+  font-family: "Gabriela", serif;
+  font-size: 1rem;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -54,7 +59,7 @@
   background: #c8c8c8;
   box-shadow: 0 0 0 transparent, -1px 2px 7px inset #000;
 }
-.wrapper .battle_ground .player .health_indicator {
+.wrapper .battle_ground .player .health_indicator_1, .wrapper .battle_ground .player .health_indicator_2 {
   display: flex;
   width: 100%;
   background: #c80000;

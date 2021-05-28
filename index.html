@@ -4,12 +4,15 @@
 	<meta charset="UTF-8">
 	<!-- <meta name="viewport" content="width=, initial-scale=1.0"> -->
 	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 	<div class="wrapper">
-		
+		<button class="start_button">Start Game</button>
+
 		<div class="dice-block">
 			<div class="dice_output"></div>
 			<button class="dice_roll">Roll the Dice</button>
@@ -23,19 +26,26 @@
 					<div class="health_icon">
 						<img src="/img/heart.svg" alt="">
 					</div>
-					<div class="health_max">
-						<!-- <div class="healthIndicator"></div> -->
-					</div>
+					<div class="health_max health_max_1"></div>
 				</div>
 			</div>
 
-			<div class="player player_2">player 2
+			<div class="player player_2">
+				<p class="player_name">player 2</p>
 				<div class="health">
-					<div class="health_max">
-						<!-- <div class="healthIndicator"></div> -->
+					<div class="health_icon">
+						<img src="/img/heart.svg" alt="">
 					</div>
+					<div class="health_max health_max_2"></div>
 				</div>
 			</div>
+
+			<!-- <div class="player player_2">player 2
+				<div class="health">
+					<div class="health_max health_max_2">
+					</div>
+				</div>
+			</div> -->
 
 		</div>
 	</div>

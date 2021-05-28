@@ -1,15 +1,32 @@
 "use strict";
 
 var rollDice = 0;
+var StartButton = document.querySelector('.start_button');
 var RollDiceBtn = document.querySelector('.dice_roll');
 var RiceOutput = document.querySelector('.dice_output');
-var HealthPoint = document.querySelector('.health_max');
+var HealthPoint1 = document.querySelector('.health_max_1');
+var HealthPoint2 = document.querySelector('.health_max_2');
 var PlayerCard1 = document.querySelector('.player_1');
 var PlayerCard2 = document.querySelector('.player_2');
-var health = 100;
-HealthPoint.innerHTML = "<div class=\"health_indicator\" style=\"width: ".concat(health, "%;\"></div>");
+var health1 = 0;
+var health2 = 0;
+StartButton.addEventListener('click', startStop);
 RollDiceBtn.addEventListener('click', diceRoll);
-RollDiceBtn.addEventListener('click', changePlayer); // смена игроков после броска
+RollDiceBtn.addEventListener('click', changePlayer); // начало и конец игры
+
+function startStop() {
+  health1 = 100;
+  health2 = 100;
+  HealthPoint1.innerHTML = "<div class=\"health_indicator_1\" style=\"width: ".concat(health1, "%;\"></div>");
+  HealthPoint2.innerHTML = "<div class=\"health_indicator_2\" style=\"width: ".concat(health2, "%;\"></div>");
+  PlayerCard1.style.cssText = 'border:2px solid #000';
+  PlayerCard2.style.cssText = 'border:2px solid #000'; // if( health1 <=0 || health2 <= 0){
+  // 	alert('GAME OVER');
+  // 	health1 = 100;
+  // 	health2 = 100;
+  // }	
+} // смена игроков после броска
+
 
 var playerCheck = true;
 
@@ -27,12 +44,18 @@ function changePlayer() {
 
 
 function hitResult() {
-  health -= rollDice;
-  HealthPoint.innerHTML = "<div class=\"health_indicator\" style=\"width: ".concat(health, "%;\"></div>");
+  if (playerCheck === true) {
+    health1 -= rollDice * 10;
+    HealthPoint1.innerHTML = "<div class=\"health_indicator_1\" style=\"width: ".concat(health1, "%;\"></div>");
+  } else {
+    health2 -= rollDice * 10;
+    HealthPoint2.innerHTML = "<div class=\"health_indicator_2\" style=\"width: ".concat(health2, "%;\"></div>");
+  }
 
-  if (health <= 0) {
+  if (health1 <= 0 || health2 <= 0) {
     alert('GAME OVER');
-    health = 100;
+    health1 = 100;
+    health2 = 100;
   }
 } // === генерация броска кубика
 
@@ -65,16 +88,7 @@ function diceRoll() {
     case 6:
       RiceOutput.style.cssText = 'background: url(img/dice6.svg);';
       break;
-  } // if( player1Check === true){
-  // 	PlayerCard1.style.cssText='border:2px solid red';
-  // 	PlayerCard2.style.cssText='border:2px solid #000';
-  // 	player1Check = false
-  // } else if (player1Check === false){
-  // 	PlayerCard1.style.cssText='border:2px solid #000';
-  // 	PlayerCard2.style.cssText='border:2px solid red';
-  // 	player1Check = true;
-  // }
+  }
 
-
-  hitResult(health, rollDice);
+  hitResult(health1, health2, rollDice);
 }

@@ -3,6 +3,10 @@ $ind-shad: #000
 $health-main: #c80000
 $health-shad: #960000
 
+*
+  font-family: 'Gabriela', serif
+  font-size: 1rem
+
 .wrapper
   display: flex
   flex-direction: column
@@ -58,7 +62,7 @@ $health-shad: #960000
           background: $ind-main
           box-shadow: 0 0 0 transparent, -1px 2px 7px inset $ind-shad
         
-        &_indicator
+        &_indicator_1, &_indicator_2
           display: flex
           width: 100%
           background: $health-main

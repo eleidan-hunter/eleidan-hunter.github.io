@@ -1,15 +1,35 @@
 let rollDice = 0;
+let StartButton = document.querySelector('.start_button');
 let RollDiceBtn = document.querySelector('.dice_roll');
 let RiceOutput = document.querySelector('.dice_output');
-let HealthPoint = document.querySelector('.health_max');
+let HealthPoint1 = document.querySelector('.health_max_1');
+let HealthPoint2 = document.querySelector('.health_max_2');
 let PlayerCard1 = document.querySelector('.player_1')
 let PlayerCard2 = document.querySelector('.player_2')
 
-let health = 100;
+let health1 = 0;
+let health2 = 0;
 
-HealthPoint.innerHTML = (`<div class="health_indicator" style="width: ${health}%;"></div>`);
+
+StartButton.addEventListener('click', startStop)
 RollDiceBtn.addEventListener('click', diceRoll);
 RollDiceBtn.addEventListener('click', changePlayer);
+
+// начало и конец игры
+function startStop(){
+	health1 = 100;
+	health2 = 100;
+	HealthPoint1.innerHTML = (`<div class="health_indicator_1" style="width: ${health1}%;"></div>`);
+	HealthPoint2.innerHTML = (`<div class="health_indicator_2" style="width: ${health2}%;"></div>`);
+	PlayerCard1.style.cssText='border:2px solid #000';
+	PlayerCard2.style.cssText='border:2px solid #000';
+	// if( health1 <=0 || health2 <= 0){
+	// 	alert('GAME OVER');
+	// 	health1 = 100;
+	// 	health2 = 100;
+	// }	
+
+}
 
 // смена игроков после броска
 let playerCheck = true;
@@ -28,12 +48,18 @@ function changePlayer(){
 
 // === уменьшение очков здоровья по броску кубика
 function hitResult (){
-
-	health -= rollDice
-	HealthPoint.innerHTML = (`<div class="health_indicator" style="width: ${health}%;"></div>`)
-	if( health <=0 ){
+	if( playerCheck === true){
+		health1 -= rollDice *10
+		HealthPoint1.innerHTML = (`<div class="health_indicator_1" style="width: ${health1}%;"></div>`)
+	} else {
+		health2 -= rollDice *10
+		HealthPoint2.innerHTML = (`<div class="health_indicator_2" style="width: ${health2}%;"></div>`)
+	}
+		
+	if( health1 <=0 || health2 <= 0){
 		alert('GAME OVER');
-		health = 100;
+		health1 = 100;
+		health2 = 100;
 	}	
 }
 
@@ -62,17 +88,5 @@ function diceRoll(){
 			RiceOutput.style.cssText='background: url(img/dice6.svg);';
 			break;
 	}
-		// if( player1Check === true){
-		// 	PlayerCard1.style.cssText='border:2px solid red';
-		// 	PlayerCard2.style.cssText='border:2px solid #000';
-		// 	player1Check = false
-		// } else if (player1Check === false){
-		// 	PlayerCard1.style.cssText='border:2px solid #000';
-		// 	PlayerCard2.style.cssText='border:2px solid red';
-		// 	player1Check = true;
-		// }
-	
-	
-	
-	hitResult(health, rollDice);
+	hitResult(health1, health2, rollDice);
 }
