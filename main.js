@@ -49,10 +49,10 @@ function changePlayer(){
 // === уменьшение очков здоровья по броску кубика
 function hitResult (){
 	if( playerCheck === true){
-		health1 -= rollDice *10
+		health1 -= rollDice
 		HealthPoint1.innerHTML = (`<div class="health_indicator_1" style="width: ${health1}%;"></div>`)
 	} else {
-		health2 -= rollDice *10
+		health2 -= rollDice
 		HealthPoint2.innerHTML = (`<div class="health_indicator_2" style="width: ${health2}%;"></div>`)
 	}
 		
