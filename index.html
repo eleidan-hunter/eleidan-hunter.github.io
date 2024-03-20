@@ -4,203 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Kalnia:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header class="header">
-        <div class="header__content">
-            <div class="container">
-                <div class="header__logo">
-                    <a href=""><img src="" alt="">Logo</a>
-                </div>
-                <div class="header__nav">
-                    <ol>
-                        <li><a href="#galeryBlock">Gallery</a></li>
-                        <li><a href="#articleBlock">Article</a></li>
-                    </ol>
-                    
-                </div>
-                <div class="header__burger">
-                    <input type="checkbox" id="burgerBtn">
-                    <label for="burgerBtn">
-                        <div class="burger-btn"></div>
-                    </label>
-                    <div class="menu">
-                        <ol >
-                            <li><a href="#galeryBlock">Gallery</a></li>
-                            <li><a href="#articleBlock">Article</a></li>
-                        </ol>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </header>
-    <section class="block-hero block-bg">
-        <div class="container">
-            <div class="block-hero__content">
-                <h1>Lorem ipsum dolor sit amet.
-                    <!-- <div class="text-decor">
-                        <div class="left"></div>
-                        <div class="center"></div>
-                        <div class="right"></div>
-                    </div> -->
-                </h1>
-                <button class="btn">Click Me</button>
+    <header></header>
+
+    <section class="container">
+        <h1>Главная страница</h1>
+
+        <div class="gallery">
+            <div class="gallery-block">
+                <div class="gallery-block__item"><a href="/pages/games.html">Игры</a></div>
+                <div class="gallery-block__item"><a href="/pages/games.html">Разное</a></div>
+                <div class="gallery-block__item"><a href="/pages/games.html"></a></div>
             </div>
         </div>
     </section>
-    <section id="galeryBlock" class="block-gallery block-bg">
-        <div class="container">
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, deserunt?</h2>
-            <div class="gallery">
-                <div class="gallery__item block-bg">
-                    <div class="gallery__item-bg block-bg">
-                    </div>
-                    <div class="gallery__item-info">
-                        <div class="gallery__item-head">
-                            <h3>Lorem, ipsum.</h3>
-                        </div>
-                        <div class="gallery__item-content">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                            <button class="btn"><a href="">Link Me</a></button>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="gallery__item block-bg">
-                    <div class="gallery__item-bg block-bg">
-                    </div>
-                    <div class="gallery__item-info">
-                        <div class="gallery__item-head">
-                            <h3>Lorem, ipsum.</h3>
-                        </div>
-                        <div class="gallery__item-content">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                            <button class="btn"><a href="">Link Me</a></button>
-                        </div>
-                    </div>
-                </div>
+    <footer></footer>
 
-                <div class="gallery__item block-bg">
-                    <div class="gallery__item-bg block-bg">
-                    </div>
-                    <div class="gallery__item-info">
-                        <div class="gallery__item-head">
-                            <h3>Lorem, ipsum.</h3>
-                        </div>
-                        <div class="gallery__item-content">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                            <button class="btn"><a href="">Link Me</a></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery__item block-bg">
-                    <div class="gallery__item-bg block-bg">
-                    </div>
-                    <div class="gallery__item-info">
-                        <div class="gallery__item-head">
-                            <h3>Lorem, ipsum.</h3>
-                        </div>
-                        <div class="gallery__item-content">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                            <button class="btn"><a href="">Link Me</a></button>
+    <!-- <section>
+        <div class="block-pvp block-border">
+            <div class="block-pvp__roll-area block-border">
+                <button id="rollDice">Roll Dice</button>
+            </div>
+            <div class="block-pvp__character-area block-border">
+                <div class="block-pvp__character character block-border">
+                    <div class="character__info block-border">
+                        <div class="character__icon">
+                            <img src="" alt="">
                         </div>
                     </div>
-                </div>
-
-                <div class="gallery__item block-bg">
-                    <div class="gallery__item-bg block-bg">
-                    </div>
-                    <div class="gallery__item-info">
-                        <div class="gallery__item-head">
-                            <h3>Lorem, ipsum.</h3>
+                    <div class="character__parameters block-border">
+                        <div class="parameter parameter__experience">
+                            <div class="icon">
+                                <img src="" alt="">
+                            </div>
+                            <div class="indicator">
+                                <div class="level"></div>
+                            </div>
                         </div>
-                        <div class="gallery__item-content">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                            <button class="btn"><a href="">Link Me</a></button>
+                        <div class="parameter parameter__health">
+                            <div class="icon">
+                                <img src="" alt="">
+                            </div>
+                            <div class="indicator">
+                                <div class="level"></div>
+                            </div>
+                        </div>
+                        <div class="parameter parameter__energy">
+                            <div class="icon">
+                                <img src="" alt="">
+                            </div>
+                            <div class="indicator">
+                                <div class="level"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="gallery__item block-bg">
-                    <div class="gallery__item-bg block-bg">
-                    </div>
-                    <div class="gallery__item-info">
-                        <div class="gallery__item-head">
-                            <h3>Lorem, ipsum.</h3>
-                        </div>
-                        <div class="gallery__item-content">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                            <button class="btn"><a href="">Link Me</a></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery__item block-bg">
-                    <div class="gallery__item-bg block-bg">
-                    </div>
-                    <div class="gallery__item-info">
-                        <div class="gallery__item-head">
-                            <h3>Lorem, ipsum.</h3>
-                        </div>
-                        <div class="gallery__item-content">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                            <button class="btn"><a href="">Link Me</a></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery__item block-bg">
-                    <div class="gallery__item-bg block-bg">
-                    </div>
-                    <div class="gallery__item-info">
-                        <div class="gallery__item-head">
-                            <h3>Lorem, ipsum.</h3>
-                        </div>
-                        <div class="gallery__item-content">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                            <button class="btn"><a href="">Link Me</a></button>
-                        </div>
-                    </div>
-                </div>
-
-                
-            </div>  
-        </div>
-    </section>
-    <section id="articleBlock" class="block-article block-bg">
-        <div class="container">
-            <div class="article">
-                <div class="article__text">
-                    <div class="content">
-                        <h2>Lorem ipsum dolor sit amet.
-                            
-                        </h2>
-                        
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio aut magni incidunt quaerat accusantium repellendus repudiandae culpa et, exercitationem soluta quis nulla officiis 
-                            dicta aliquam praesentium magnam voluptatum quos beatae sequi aspernatur voluptatem. Fuga sapiente aliquam enim. Atque autem sed, quis pariatur error in harum quam sunt beatae neque 
-                            dicta aut, maiores accusamus tempora quo aliquam explicabo! Deleniti deserunt adipisci quaerat sequi, ex sapiente praesentium incidunt non dolor ea, eveniet molestiae vel saepe harum. 
-                            Illum autem nihil facilis magni fugit dolorum laudantium quae labore sed officia. Nesciunt ab beatae quae reiciendis, cum quis totam voluptate sint optio sunt alias ex cupiditate magni! 
-                            Accusantium distinctio nulla doloribus ad nostrum officiis ea totam eligendi? Praesentium eligendi et rerum excepturi, ipsa accusamus voluptatum nostrum odio nihil numquam voluptates 
-                           </p>
-                    </div>
-                </div>
+                <div class="block-pvp__character block-border"></div>
             </div>
         </div>
-    </section>
-    <footer>
-        <div class="footer">
-            <div class="container">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, odio.</p>
-            </div>
-        </div>
-    </footer>
+    </section> -->
+
 </body>
 </html>
